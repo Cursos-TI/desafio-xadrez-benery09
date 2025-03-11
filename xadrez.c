@@ -2,8 +2,11 @@
  
 int main() {
    
+    // Declarar Variaveis
     int torre, dama, bispo;
 
+
+    // Movimento da Torre
     torre = 1;
     printf("Torre:\n");
 
@@ -13,6 +16,7 @@ int main() {
     }
 
     bispo = 1;
+    //Movimento do bispo
 
     printf("\nBispo:\n");
     do {
@@ -20,6 +24,8 @@ int main() {
         bispo++;
     } while (bispo <= 5);
     
+    // Movimento da Dama
+
     printf("\nDama:\n");
 
     for (dama = 1; dama <= 8; dama++) {
@@ -27,7 +33,25 @@ int main() {
     }
 
 
+    printf("\nCavalo\n");
 
+     // Declarar Variaveis
+
+    int cavalo; 
+    int cavalo2 = 0;
+
+    // Movimento do cavalo
+
+    for (cavalo = 0; cavalo < 1; cavalo++) {
+
+        while (cavalo2 < 2) {
+            printf("Baixo, ");
+            cavalo2++;
+            
+        }
+        printf("Esquerda\n");
+
+    }
 
 
 
