@@ -1,61 +1,77 @@
 #include <stdio.h>
- 
-int main() {
-   
-    // Declarar Variaveis
-    int torre, dama, bispo;
 
-
-    // Movimento da Torre
-    torre = 1;
+void movimentotorre() {
+    int torre = 1;
     printf("Torre:\n");
 
     while (torre <= 5) {
         printf("Direita\n");
         torre++;
     }
+}
+    
+void movimentobispo() {
+    printf("\nBispo:\n");
+    for (int bispo1 = 1; bispo1 <= 5; bispo1++) {
+       for (int bispo2 = 1; bispo2 <= 1; bispo2++) {
+           printf("Direita\n");
+       }
+       printf("Cima\n");
+    }
+}
 
-    bispo = 1;
+void movimentodama() {
+    int dama = 1;
+    printf("\nDama:\n");
+
+    while (dama <= 8) {
+        printf("Esquerda\n");
+        dama++;
+    }
+    
+}
+
+void movimentocavalo() {
+    printf("\nCavalo:\n");
+    for (int cavalo1 = 0; cavalo1 < 1; cavalo1++) { 
+        int cavalo2 = 0;
+        while (cavalo2 < 2) {  
+            printf("Cima\n");
+            cavalo2++;
+    
+            if (cavalo2 == 1) {
+                continue;  
+            }
+        }
+        printf("Direita\n");  
+        break;  
+    }    
+
+}
+
+int main() {
+   
+    // Declarar Variaveis
+
+    int torre, dama;
+
+    // Movimento da Torre
+
+    movimentotorre();
+    
     //Movimento do bispo
 
-    printf("\nBispo:\n");
-    do {
-        printf("Cima Direita\n");
-        bispo++;
-    } while (bispo <= 5);
+    movimentobispo();
     
     // Movimento da Dama
 
-    printf("\nDama:\n");
-
-    for (dama = 1; dama <= 8; dama++) {
-        printf("Esquerda\n");
-    }
-
-
-    printf("\nCavalo\n");
-
-     // Declarar Variaveis
-
-    int cavalo; 
-    int cavalo2 = 0;
+    movimentodama();
 
     // Movimento do cavalo
+    
+    movimentocavalo();
 
-    for (cavalo = 0; cavalo < 1; cavalo++) {
-
-        while (cavalo2 < 2) {
-            printf("Baixo, ");
-            cavalo2++;
-            
-        }
-        printf("Esquerda\n");
-
-    }
-
-
-
-
+    // Retorno da função
 
     return 0;
 }
